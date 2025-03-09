@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kino Angola</title>
+
+
+    <!--==================================== LINKS ====================================-->
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../../public/assets/images/logomarca/Kino Logo (1).png" type="image/x-icon">
+
+    <!-- LOCAL CSS LINKS -->
+    <link rel="stylesheet" href="../../public/assets/css/profile.css">
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        .container-profile{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        aside{
+            width: 300px;
+        }
+        .cover-photo img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .profile-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            background: #333;
+            text-align: center;
+        }
+
+        .menu ul li {
+            display: inline;
+            padding: 15px;
+        }
+
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .section {
+            padding: 20px;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-item {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 1rem;
+        }
+
+        .menu-item img {
+            width: 100px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .menu-item h3 {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .menu-item p {
+            margin-top: 0.2rem;
+            font-size: .85rem;
+            color: #5b5b5b;
+        }
+
+        .menu-item .lastone {
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item p i {
+            color: #ffc800;
+            cursor: pointer;
+            transition: .4s;
+        }
+
+        .menu-item p i:hover {
+            transform: translateY(-1px);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input,
+        textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!--==================================== CABEÇALHO ==================================== -->
+    <header class="cabecalho">
+        <a href="/" class="logo-link">
+            <img src="../../public/assets/images/logomarca/Kino Logo (1).png" width="40" height="40"
+                alt="Kino Angola Logo">
+            Kino Angola
+        </a>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                    <a href="explorar.html" class="nav-link">Explorar</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Parceria</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Why Kino?</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Sobre</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="extras">
+            <a href="#" class="link-extra"><i class='bx bx-cart-alt'></i></a>
+            <a href="#" class="link-extra"><i class='bx bx-user-circle'></i></a>
+            <a href="sign.html" class="link-extra link-login">Entrar</a>
+        </div>
+    </header>
+<div class="container-profile">
+    
+    <aside>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="#menu">Cardápio</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#testimonials">Testemunhos</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li><a href="#policies">Políticas</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#partners">Parcerias</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <section id="menu" class="section">
+            <h2>Cardápio</h2>
+
+            <div class="section-item">
+
+                <div class="menu-item">
+                    <img src="../../public/assets/images/qd (16).png" alt="Prato Exemplo">
+                    <div>
+                        <h3>Nome do Prato</h3>
+                        <p>Preço: 5.000 Kz</p>
+                        <p class="lastone">Entrega: Gratuita</p>
+                        <p>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="../../public/assets/images/qd (16).png" alt="Prato Exemplo">
+                    <div>
+                        <h3>Nome do Prato</h3>
+                        <p>Preço: 5.000 Kz</p>
+                        <p class="lastone">Entrega: Gratuita</p>
+                        <p>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="../../public/assets/images/qd (16).png" alt="Prato Exemplo">
+                    <div>
+                        <h3>Nome do Prato</h3>
+                        <p>Preço: 5.000 Kz</p>
+                        <p class="lastone">Entrega: Gratuita</p>
+                        <p>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="../../public/assets/images/qd (16).png" alt="Prato Exemplo">
+                    <div>
+                        <h3>Nome do Prato</h3>
+                        <p>Preço: 5.000 Kz</p>
+                        <p class="lastone">Entrega: Gratuita</p>
+                        <p>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="../../public/assets/images/qd (16).png" alt="Prato Exemplo">
+                    <div>
+                        <h3>Nome do Prato</h3>
+                        <p>Preço: 5.000 Kz</p>
+                        <p class="lastone">Entrega: Gratuita</p>
+                        <p>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="../../public/assets/images/qd (16).png" alt="Prato Exemplo">
+                    <div>
+                        <h3>Nome do Prato</h3>
+                        <p>Preço: 5.000 Kz</p>
+                        <p class="lastone">Entrega: Gratuita</p>
+                        <p>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="../../public/assets/images/qd (16).png" alt="Prato Exemplo">
+                    <div>
+                        <h3>Nome do Prato</h3>
+                        <p>Preço: 5.000 Kz</p>
+                        <p class="lastone">Entrega: Gratuita</p>
+                        <p>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="../../public/assets/images/qd (16).png" alt="Prato Exemplo">
+                    <div>
+                        <h3>Nome do Prato</h3>
+                        <p>Preço: 5.000 Kz</p>
+                        <p class="lastone">Entrega: Gratuita</p>
+                        <p>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="about" class="section">
+            <h2>Sobre o Estabelecimento</h2>
+            <p>Histórico e descrição detalhada do local.</p>
+        </section>
+
+        <section id="testimonials" class="section">
+            <h2>Testemunhos</h2>
+            <p>"Melhor restaurante da cidade!" - Cliente Feliz</p>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Formulário de Contato</h2>
+            <form>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+
+</div>
+
+    <!--==================================== RODAPÉ ==================================== -->
+    <footer>
+        <div class="content">
+            <div class="sessao">
+                <a href="#" class="title">Empresa</a>
+                <div class="desc">
+                    <a href="#">Nossa História</a>
+                    <a href="#">Missão e Visão</a>
+                    <a href="#">Equipe</a>
+                    <a href="#">Parceiros</a>
+                </div>
+            </div>
+            <div class="sessao">
+                <a href="#" class="title">Ajuda</a>
+                <div class="desc">
+                    <a href="#">Suporte ao Cliente</a>
+                    <a href="#">Guia de Usuário</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Termo e Privacidade</a>
+                </div>
+            </div>
+            <div class="sessao">
+                <a href="#" class="title">Conecta-se</a>
+                <div class="desc">
+                    <a href="#">Eventos</a>
+                    <a href="#">Descontos e Promoções</a>
+                    <a href="#"><strong>kinoangolaoficial@gmail.com</strong></a>
+                    <div class="social-links">
+
+                    </div>
+                </div>
+            </div>
+            <div class="newslatter">
+                <h3 class="title">Inscreva a sua empresa</h3>
+                <div class="desc">
+                    <p>Envie-nos o seu e-mail para que possamos entrar em contato consigo</p>
+                    <form action="#">
+                        <input type="email" required placeholder="E-mail">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="separador"></div>
+        <p class="copy">&copy; 2025 <strong>Kino Angola</strong> ▪️ Todos os direitos reservador.</p>
+    </footer>
+
+    <!--==================================== SCRIPTS ==================================== -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- LOCAL JS -->
+    <script src="../../public/assets/js/scripts.js"></script>
+</body>
+
+</html>
